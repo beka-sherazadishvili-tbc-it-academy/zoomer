@@ -1,1 +1,15 @@
-<p>banner works!</p>
+<ng-container *ngIf="banners$ | async as banners">
+  <div class="slideshow-container">
+    <div
+      class="mySlides"
+    >
+      <app-banner-item
+        *ngFor="let banner of banners"
+        [banner]="banner"
+      ></app-banner-item>
+    </div>
+
+    <a class="prev" (click)="changeSlide(-1, banners.length)">❮</a>
+    <a class="next" (click)="changeSlide(1, banners.length)">❯</a>
+  </div>
+</ng-container>

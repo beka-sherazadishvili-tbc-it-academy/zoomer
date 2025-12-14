@@ -1,0 +1,9 @@
+<div
+  [ngClass]="{
+    'lg-banner': banner.largeBanner,
+    'sm-banner': !banner.largeBanner
+  }"
+  class="banner__wrapper"
+>
+  <img [src]="banner.webImageUrl" [alt]="banner.categoryName" />
+</div>

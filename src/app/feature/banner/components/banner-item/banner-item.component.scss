@@ -1,0 +1,22 @@
+.banner__wrapper {
+  display: flex;
+  overflow: hidden;
+
+  &.lg-banner {
+    max-width: 895px;
+    width: 100%;
+    min-height: 340px;
+  }
+
+  &.sm-banner {
+    max-width: 220px;
+    width: 100%;
+    min-height: 340px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
