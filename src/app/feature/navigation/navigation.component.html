@@ -1,0 +1,21 @@
+<div
+  class="navbar-container"
+  (mouseenter)="isVisible = true"
+  (mouseleave)="isVisible = false"
+>
+  <div>
+    <app-menu-item
+      *ngFor="let item of menuList$ | async"
+      [name]="item.name"
+      [id]="item.id"
+      (hoverId)="onHover($event)"
+    ></app-menu-item>
+  </div>
+  <div>
+    <app-submenu
+      *ngIf="isVisible"
+      class="submenu"
+      [submenu]="childItems$ | async"
+    ></app-submenu>
+  </div>
+</div>

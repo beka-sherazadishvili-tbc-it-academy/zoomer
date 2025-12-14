@@ -1,0 +1,17 @@
+<div class="zoomer-panel">
+  <div class="zoomer-columns">
+    <div *ngFor="let menu of submenu" class="category-wrapper">
+
+      <h3 class="category-title">{{ menu.type }}</h3>
+
+      <div class="category-list">
+        <a *ngFor="let name of menu.subtype" class="category-item">
+          {{ name }}
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <img src="https://s3.zoommer.ge/site/327175d4-1f98-4867-b919-8d7f3abca8c8c498c62e-2ff1-47a9-b9ac-d328fe08e0a0.png" alt="" class="bg-image">
+</div>
